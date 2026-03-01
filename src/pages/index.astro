@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
+import { publications } from "../lib/publications";
+
+const featuredPublications = publications.slice(0, 3);
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -30,13 +33,22 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">Recent Publications</div>
   </div>
 
-  <HorizontalCard
-    title="Actor-Curator"
-    img="public/project_preview/actor-curator/preview.webp"
-    desc="A learned neural curator jointly trained with the actor to dynamically select problems from massive datasets. Non-stationary stochastic bandit formulation with OSMD-based updates and regret guarantees; up to 30% performance gains and 80% faster convergence across challenging reasoning benchmarks."
-    url="https://arxiv.org/abs/2602.20532v1"
-    badge="NEW"
-  />
+  {
+    featuredPublications.map((publication, index) => (
+      <>
+        <HorizontalCard
+          title={publication.title}
+          subtitle={publication.subtitle}
+          desc={publication.description}
+          url={publication.url}
+          badge={publication.badge}
+          img={publication.image}
+          links={publication.links}
+        />
+        {index < featuredPublications.length - 1 && <div class="divider my-0" />}
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
