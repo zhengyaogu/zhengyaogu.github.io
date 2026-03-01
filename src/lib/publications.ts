@@ -24,7 +24,7 @@ export const publications: Publication[] = [
     description:
       "A learned neural curator jointly trained with the actor to dynamically select problems from massive datasets. Non-stationary stochastic bandit formulation with OSMD-based updates and regret guarantees; up to 30% performance gains and 80% faster convergence across challenging reasoning benchmarks.",
     url: "https://arxiv.org/abs/2602.20532v1",
-    image: "/figures/disc.png",
+    image: "/figures/actor-curator.png",
     links: [
       { label: "Website", href: "https://disc-search.github.io/" },
       { label: "PDF", href: "https://arxiv.org/pdf/2502.16706" },
