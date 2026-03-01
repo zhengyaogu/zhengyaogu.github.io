@@ -26,8 +26,7 @@ export const publications: Publication[] = [
     url: "https://arxiv.org/abs/2602.20532v1",
     image: "/figures/actor-curator.png",
     links: [
-      { label: "Website", href: "https://disc-search.github.io/" },
-      { label: "PDF", href: "https://arxiv.org/pdf/2502.16706" },
+      { label: "PDF", href: "https://arxiv.org/abs/2602.20532v1" },
     ],
   }
 ];

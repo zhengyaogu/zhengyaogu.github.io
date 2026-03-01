@@ -10,6 +10,15 @@ const featuredPublications = publications.slice(0, 3);
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
+
+const sectionCardClasses = "rounded-2xl border border-base-200/60 bg-base-100/80 p-6 shadow-sm space-y-5";
+const listBaseClasses = "space-y-3 text-base md:text-lg leading-relaxed";
+const listItemWrapperClasses = "flex items-start gap-3";
+const listItemContentClasses = "flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-2";
+const bulletBaseClasses = "mt-2 h-2 w-2 rounded-full";
+const bulletPrimary = "bg-primary";
+const bulletWarning = "bg-base-content";
+const supportingTextClasses = "text-base-content/70";
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -17,13 +26,13 @@ const last_posts = posts.slice(0, 3);
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Yao</div>
     <div class="text-3xl py-3 font-bold">I work on autonomous agents that can plan, reason, and Collaborate with each other.</div>
-    <div class="text-3xl py-3 font-bold">
+    <p>
     I am a PhD student at <a class="link link-primary" href="https://cs.uic.edu/">University of Illinois Chicago</a>
     under the supervision of <a class="link link-primary" href="https://bdsc-uic.github.io/">Philip S. Yu</a>.
     I received an M.S. from <a class="link link-primary" href="https://cds.nyu.edu/"> Center for Data Science, NYU</a> in 2024.
     Before that, I studied Mathematics and Computer Science at <a class="link link-primary" href="https://www.reed.edu/">Reed College</a>, 
     where I was introduced to Deep Learning by <a class="link link-primary" href="https://markandrewhopkins.com/">Mark Hopkins</a>.
-    </div>
+    </p>
     <div class="mt-8">
       <a class="btn" href="https://x.com/zhengyao_gu" target="_blank"> Let's connect!</a>
     </div>
