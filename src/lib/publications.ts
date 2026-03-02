@@ -63,7 +63,7 @@ export const publications: Publication[] = [
     description:
       "TestNUC boosts LLM classification at inference time by majority-voting over predictions on semantically similar unlabeled neighbors. Outperforms self-consistency by ~6–10% across 8 datasets and 4 models; scales linearly in compute.",
     url: "https://aclanthology.org/2025.acl-long.1486/",
-    image: "/figures/recode.png",
+    image: "/figures/testnuc.png",
     links: [
       { label: "PDF", href: "https://aclanthology.org/2025.acl-long.1486/" },
     ],
