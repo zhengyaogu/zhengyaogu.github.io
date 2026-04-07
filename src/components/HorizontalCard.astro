@@ -42,7 +42,9 @@ const baseRel = target === "_blank" ? "noopener noreferrer" : undefined;
         >
           {title}
         </a>
-        {badge && <div class="badge badge-secondary">{badge}</div>}
+        {badge && (Array.isArray(badge) ? badge : [badge]).map((b) => (
+          <div class="badge badge-secondary">{b}</div>
+        ))}
       </div>
       {subtitle && <div class="text-sm text-base-content/70 py-1">{subtitle}</div>}
       {desc && (
